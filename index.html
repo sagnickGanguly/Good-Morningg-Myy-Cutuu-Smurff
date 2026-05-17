@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning, Cutiepie ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Minimalistic, smooth color palette and animated background */
+        :root {
+            --bg-color: #fcf9f5;
+            --text-main: #3d3b38;
+            --text-accent: #a37c73;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Subtle animated gradient background to make it feel premium */
+        body {
+            background: linear-gradient(-45deg, #fdfbfb, #f4eee8, #faebd7, #fdfbfb);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        /* Long sections for scrolling */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 10%;
+            box-sizing: border-box;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: var(--text-accent);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        .quote {
+            font-size: 2.2rem;
+            line-height: 1.5;
+            max-width: 800px;
+            font-style: italic;
+        }
+
+        .message {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            color: var(--text-accent);
+            font-weight: 600;
+        }
+
+        /* Scroll Down Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            animation: bounce 2s infinite;
+            opacity: 0.6;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-7px); }
+        }
+
+        /* --- Smooth Animations CSS --- */
+        .hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            filter: blur(5px);
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        /* Floating hearts styling */
+        .heart {
+            color: var(--text-accent);
+            font-size: 1.5rem;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .quote { font-size: 1.8rem; }
+            .message { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: The Greeting -->
+    <section class="hero">
+        <h1 class="hidden">Good Morning, Cutiepie.</h1>
+        <p class="hidden">I was missing something today...</p>
+        <div class="scroll-indicator hidden">Scroll Down ↓</div>
+    </section>
+
+    <!-- Section 2: Missing her -->
+    <section>
+        <h2 class="quote hidden">"I woke up this morning and realized my phone was entirely too quiet."</h2>
+        <p class="message hidden">I was missing my favorite part of the day: your good morning message. Since I couldn't read yours right away, I decided to pour my heart into making you this one instead.</p>
+    </section>
+
+    <!-- Section 3: Deep quote about her importance -->
+    <section>
+        <h2 class="quote hidden">You are the anchor in my life. The calm to my chaos.</h2>
+        <p class="message hidden">Sometimes I pause and just wonder how I got so lucky. You are so incredibly important to me. You aren't just a part of my life; you are the lens through which everything else looks brighter, warmer, and <span class="highlight">better</span>.</p>
+    </section>
+
+    <!-- Section 4: How badly you want her in your life -->
+    <section>
+        <h2 class="quote hidden">"I want you today, tomorrow, next week, and for the rest of my life."</h2>
+        <p class="message hidden">I want you in my life so badly—not just for the beautiful, picture-perfect moments, but for every ordinary Tuesday, every quiet morning, and every heartbeat in between. Knowing you are mine gives me a sense of peace I have never known before.</p>
+    </section>
+
+    <!-- Section 5: The Closing -->
+    <section>
+        <h2 class="quote hidden">I love you. More than words, more than distance, more than anything.</h2>
+        <p class="message hidden">I hope this brings a huge smile to your beautiful face today. Have the most amazing day, my love. I can't wait to talk to you later.</p>
+        <div class="heart hidden">❤️</div>
+    </section>
+
+    <!-- JavaScript for smooth scroll reveal animations -->
+    <script>
+        // Use Intersection Observer to trigger animations when scrolling
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
+
